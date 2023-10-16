@@ -2,14 +2,13 @@
 const jwt = require('jsonwebtoken');
 
 
-// routes/auth.js
 const express = require('express');
 const bcrypt = require('bcrypt');
 const passport = require('../passport');
 const Admin = require('../models/admin');
 const SalesPerson = require('../models/salesperson');
 const router = express.Router();
-// Salesperson (User) Registration
+
 router.post('/salesperson/register', async (req, res) => {
   try {
     const { username, password } = req.body;

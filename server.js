@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 
 // Connect to MongoDB
-const MONGODB_URI = 'mongodb://localhost:27017/StockManagement';
+const MONGODB_URI = 'mongodb+srv://chandini:1234@stockmanagement.euudfyk.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -32,5 +32,5 @@ app.use('/api/salesperson', salespersonRoutes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

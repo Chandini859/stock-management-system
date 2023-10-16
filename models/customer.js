@@ -1,4 +1,3 @@
-// models/customer.js
 const mongoose = require('mongoose');
 
 const CustomerSchema = new mongoose.Schema({
@@ -6,7 +5,6 @@ const CustomerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  // Add other fields as needed
 });
 
 const Customer = mongoose.model('Customer', CustomerSchema);
