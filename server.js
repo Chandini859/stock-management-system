@@ -25,6 +25,11 @@ mongoose.connect(MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err.message);
 });
 
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Welcome to the root of the application');
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
